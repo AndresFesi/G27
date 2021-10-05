@@ -1,0 +1,42 @@
+========CREAR TABLA
+"CREATE TABLE ADMIN.MEDICOS 
+    ( 
+     ID            NUMBER , 
+     SPECIALTY     VARCHAR2 (20) , 
+     GRADUATE_YEAR NUMBER , 
+     DEPARTMENT_ID NUMBER , 
+     NAME          VARCHAR2 (4000) 
+    ) 
+    LOGGING"
+
+
+
+
+==========================================================================================
+========SENTENCIA GET (seleccionar o leer registros)
+SELECT * FROM MEDICOS
+
+==========================================================================================
+========SENTENCIA POST (insertar o crear nuevo registro)
+BEGIN
+    INSERT INTO MEDICOS (ID, SPECIALTY, GRADUATE_YEAR, DEPARTMENT_ID, NAME) VALUES(:id, :specialty, :graduate_year, :department_id, :name);
+    :status_code:=201;
+END;
+
+==========================================================================================
+========SENTENCIA PUT (actualizar registros)
+BEGIN
+    UPDATE MEDICOS SET SPECIALTY=:specialty, GRADUATE_YEAR=:graduate_year, DEPARTMENT_ID=:department_id, NAME=:name WHERE ID=:id;
+    :status_code:=201;
+END;
+
+==========================================================================================
+========SENTENCIA DELETE (eliminar o borrar registros)
+BEGIN
+    DELETE FROM MEDICOS WHERE ID=:id;
+    :status_code:=204;
+END;
+
+==========================================================================================
+========SENTENCIA GET (PARA ID)
+SELECT * FROM MEDICOS WHERE ID=:id
