@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Servicios Médicos Especializados</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/Acciones.js"></script>
+    </head>
+
+    <body>
+        <h1> Base de datos de doctores </h1>
+        <div id="resultadoDoctores"></div>
+        <button onclick="consultarInformacionDoctores()"> Consultar Doctores</button>
+        <div>
+            <input type="number" id="id" placeholder="id">
+            <input type="text" id="specialty" placeholder="specialty">
+            <input type="number" id="graduate_year" placeholder="graduate_year">
+            <input type="number" id="department_id" placeholder="department_id">
+            <input type="text" id="name" placeholder="name">
+        </div>
+        <button onclick="guardarInformacionDoctores()"> Guardar Doctor</button>
+        <button onclick="actualizarInformacionDoctores()"> Actualizar Doctor </button>
+
+        
+        <h1>===================================================</h1>
+        <h1> Base de datos de clientes </h1>
+        <div id="resultadoClientes"></div>
+        <button onclick="consultarInformacionClientes()"> Consultar Clientes</button>
+        <div>
+            <input type="number" id="id2" placeholder="id">
+            <input type="text" id="name2" placeholder="name">
+            <input type="text" id="email" placeholder="email">
+            <input type="number" id="age" placeholder="age">
+        </div>
+        <button onclick="guardarInformacionClientes()"> Guardar Cliente </button>
+        <button onclick="actualizarInformacionClientes()"> Actualizar Cliente </button>
+
+
+        <h1>===================================================</h1>
+        <h1> Base de datos de mensajes </h1>
+        <div id="resultadoMensajes"></div>
+        <button onclick="consultarInformacionMensajes()"> Consultar Mensajes </button>
+        <div>
+            <input type="number" id="id3" placeholder="id">
+            <input type="text" id="messagetext" placeholder="messagetext">
+        </div>
+        <button onclick="guardarInformacionMensajes()"> Guardar Mensaje</button>
+        <button onclick="actualizarInformacionMensajes()"> Actualizar Mensaje </button>
+    </body>
+
+</html>
